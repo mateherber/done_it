@@ -49,7 +49,7 @@ void main() {
         when(mockGetAllTodo(any)).thenAnswer((_) async => Right(allTodo));
         // assert later
         final expected = [
-          TodoLoadingState(),
+          // TodoLoadingState(),
           TodoLoadSuccessState(todoList: allTodo),
         ];
         expectLater(todoBloc, emitsInOrder(expected));
